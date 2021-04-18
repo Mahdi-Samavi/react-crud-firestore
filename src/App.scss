@@ -1,0 +1,40 @@
+@import '~bootstrap/scss/bootstrap';
+
+$dark_bg: #212427;
+$dark_border: #4d5052;
+
+* {
+    transition: all 0.4s 10ms !important;
+}
+
+body {
+    background-color: $dark_bg;
+    perspective: 4000px;
+    overflow: hidden;
+}
+
+#root {
+    min-height: 100vh;
+    background-color: #fff;
+    transition: background-color 0.4s 10ms, transform 0.9s !important;
+    transform-origin: left;
+}
+
+#root.dark {
+    background-color: $dark_bg;
+    transform: rotateY(360deg);
+    
+    .form-control {
+        background-color: #343a40;
+        border-color: $dark_border;
+        color: #fff;
+    }
+
+    .btn-dark {
+        border-color: $dark_border;
+    }
+}
+
+#search {
+    max-width: 300px;
+}
